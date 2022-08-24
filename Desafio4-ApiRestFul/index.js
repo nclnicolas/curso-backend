@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
 const PORT = 8080;
 
 const server = app.listen(PORT, () => {
