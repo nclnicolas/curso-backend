@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REST</title>
+</head>
+<body>
+    <form id="data">
+        <div>
+            <label>Nombre</label>
+            <input type="text" id="nombre" placeholder="Nombre del producto" name="nombre">
+        </div>
+        <div class="mb-3">
+            <label>Precio</label>
+            <input type="text" id="precio" placeholder="Precio del producto" name="precio">
+        </div>
+        <div class="mb-3">
+            <label>URL de la imagen del producto</label>
+            <input type="text" id="url" placeholder="URL de la imagen" name urlImage>
+        </div>
+        <button type="button" onclick="guardarProducto()">Guardar</button>
+    </form>
+
+    <script src="./main.js"></script>
+</body>
+</html>
