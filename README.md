@@ -36,3 +36,6 @@ Realizar una aplicación frontend sencilla, utilizando HTML/CSS/JS ó algún fra
 - En el caso de requerir una ruta no implementada en el servidor, este debe contestar un objeto de error: ej { error : -2, descripcion: ruta 'x' método 'y' no implementada}
 - La estructura de programación será ECMAScript, separada tres en módulos básicos (router, lógica de negocio/api y persistencia ). Más adelante implementaremos el desarrollo en capas. Utilizar preferentemente clases, constructores de variables let y const y arrow function.
 - Realizar la prueba de funcionalidad completa en el ámbito local (puerto 8080) y en glitch.com
+
+#### Inconvenientes al querer subir el repo a glitch
+![image](https://user-images.githubusercontent.com/82584495/190483482-c1d2ac5f-7dad-45ec-8f58-68d74a08f97a.png)
