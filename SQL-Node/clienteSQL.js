@@ -30,8 +30,9 @@ class ClienteSQL {
     return this.knex('articulos').insert(data)
   }
 
-  eliminar(id) {}
-
+  eliminar(id) {
+    return this.knex('articulos').delete(id);
+  }
   actualizar(id) {}
 
   close() {

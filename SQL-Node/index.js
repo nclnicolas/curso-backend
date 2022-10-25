@@ -1,7 +1,6 @@
 import ClienteSQL from "./clienteSQL.js";
 
 //Enviar opciones de conexion al cliente
-
 const options = {
   client: "mysql",
   connection: {
@@ -21,7 +20,6 @@ csql
   .crearTabla()
   .then(() => {
     //Realizar acciones sobre la tabla que se creo
-
     console.log("Tabla creada!!");
 
     //Insertar datos en una tabla

@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "name": "adsasd",
+    "price": 122,
+    "urlImage": "asdasd",
+    "description": "aaaa",
+    "code": "asda",
+    "stock": 33,
+    "id": "ad19ac9d-2433-4f8b-8442-6a600701476a",
+    "timeStamp": 1663443472234
+  },
+  {
+    "name": "pedriyo",
+    "price": 122,
+    "urlImage": "asdasd",
+    "description": "aaaa",
+    "code": "asda",
+    "stock": 33,
+    "id": "5bf3d1f7-8ccf-4d46-92ac-2bb789277960",
+    "timeStamp": 1663445188544
+  }
+]
