@@ -1,0 +1,89 @@
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <title>APP</title>
+    </head>
+    <body>
+        <%- include('partials/nav') %>
+
+        <div class='container mt-5'>
+            <div class='row' id="login">
+                <form action="/api/logout" method="get">
+
+                    <p> Bienvenido <%= email %></p>
+                    <button type="submit" class="btn btn-dark">Logout</button>
+
+                </form>
+            </div>
+        </div>
+
+        <div class='container mt-5'>
+            <div class='row'>
+                <div class='col'>
+                    <table class='table'>
+                        <thead class='table-dark'>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Imagen</th>
+                        </thead>
+                        <tbody>
+        
+                            <% infoProducts.forEach(product => { %>
+                                <tr>
+                                    <td> <%= product.nombre %> </td>
+                                    <td> AR$<%= product.precio %> </td>
+                                    <td> <img src="<%= product.foto %>" height="30px"> </td>
+                                </tr>
+                            <% }) %>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class='container mt-5'>
+            <div class='row'>
+                <div class='col' id="centro-mensajes">
+                    <div class="text-bg-dark p-3" style="margin-bottom: 5px;">Centro de mensajes</div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+                        <input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" id="email">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Nombre</span>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1" id="nombre">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Apellido</span>
+                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Username" aria-describedby="basic-addon1" id="apellido">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Edad</span>
+                        <input type="number" class="form-control" placeholder="Edad" aria-label="Username" aria-describedby="basic-addon1" id="edad">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Alias</span>
+                        <input type="text" class="form-control" placeholder="Alias" aria-label="Username" aria-describedby="basic-addon1" id="alias">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Url-Foto</span>
+                        <input type="email" class="form-control" placeholder="urlAvatar" aria-label="Username" aria-describedby="basic-addon1" id="urlAvatar">
+                    </div>
+                    <div class="input-group mb-3" id="chat"></div>
+                    <div class="input-group" style="margin-bottom: 5px;">
+                        <span class="input-group-text">Su mensaje:</span>
+                        <textarea class="form-control" aria-label="With textarea" id="mensaje"></textarea>
+                    </div>
+                    <button type='button' class='btn btn-primary' id="enviar">Enviar</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+        <script src="/js/socket.js"></script>
+    </body>
+</html>
